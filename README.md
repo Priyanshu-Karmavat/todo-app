@@ -25,8 +25,7 @@ The app allows users to manage daily tasks with persistent storage using the bro
 
 ## 🌐 Live Demo
 
-https://priyanshu-karmavat.github.io/todo-app/gi
-
+https://priyanshu-karmavat.github.io/todo-app/
 ## 📂 Installation
 
 1. Clone the repository
