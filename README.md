@@ -12,6 +12,9 @@ The app allows users to manage daily tasks with persistent storage using the bro
 - 💾 Save tasks using Local Storage
 - 🎨 Modern Glassmorphism UI
 - ⌨️ Add tasks by pressing Enter
+- ✅ Clear All
+- ✅ Task Counter
+- ✅ Search Tasks
 
 ## 🛠️ Technologies Used
 
