@@ -88,6 +88,23 @@ body {
   box-shadow: 0 5px 15px rgba(0, 191, 255, 0.4);
 }
 
+.deleteAllBtn {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  background: linear-gradient(135deg, rgb(142, 44, 44), red);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.deleteAllBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(200, 0, 0, 0.4);
+}
+
 ul {
   list-style: none;
   max-height: 300px;
@@ -170,11 +187,11 @@ li:hover {
   transform: scale(1.01);
 }
 
-#editText{
-  padding:5px 5px;
-  border-radius:5px;
-  margin:0px 5px;
-  border:none;
+#editText {
+  padding: 5px 5px;
+  border-radius: 5px;
+  margin: 0px 5px;
+  border: none;
 }
 
 /* scrollbar */
@@ -189,4 +206,14 @@ ul::-webkit-scrollbar-thumb {
 
 ul::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+#taskCounter{
+  font-weight: bold;
+}
+
+#inputContainer{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap:5px;
 }

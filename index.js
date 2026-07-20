@@ -1,6 +1,9 @@
 let addInput = document.querySelector("#addInput"); //input
 let addBtn = document.querySelector(".addBtn");
 let list = document.querySelector(".list");
+let deleteAllBtn = document.querySelector(".deleteAllBtn")
+let taskCounter = document.getElementById("taskCounter");
+let searchInput = document.getElementById("searchInput");
 
 function getTasks() {
   return JSON.parse(localStorage.getItem("tasks")) || [];
@@ -10,10 +13,8 @@ function storeTasks(tasks) {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-function renderTasks() {
+function renderTasks(tasks = getTasks()) {
   list.innerHTML = "";
-
-  const tasks = getTasks();
 
   tasks.forEach(task => {
     const text = document.createElement("span");
@@ -101,6 +102,14 @@ function renderTasks() {
       text.style.textDecoration = "none";
     }
   })
+
+  let totalTask = tasks.length;
+  let completedTask = tasks.filter(task => task.completed).length;
+  let RemainingTask = totalTask - completedTask;
+
+  taskCounter.innerText = `
+  Total : ${totalTask} | Completed : ${completedTask} | Remaining : ${RemainingTask}
+  `;
 }
 
 function addTask(text) {
@@ -136,5 +145,28 @@ addInput.addEventListener("keydown", (e) => {
   }
 })
 
+function deleteAllTasks() {
+  const confirmDelete = confirm("Are you sure you want to delete all")
+
+  if (!confirmDelete) {
+    return;
+  }
+
+  localStorage.removeItem("tasks");
+  renderTasks();
+}
+
+deleteAllBtn.addEventListener("click", () => {
+  deleteAllTasks();
+})
+
+searchInput.addEventListener("input", (e) => {
+  const value = e.target.value.toLowerCase();
+  const tasks = getTasks();
+  const searchResult = tasks.filter(task => {
+    return task.text.toLowerCase().includes(value);
+  })
+  renderTasks(searchResult);
+})
 
 renderTasks();
