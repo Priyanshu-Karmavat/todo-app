@@ -169,4 +169,6 @@ searchInput.addEventListener("input", (e) => {
   renderTasks(searchResult);
 })
 
+searchInput.value = ""
+
 renderTasks();
