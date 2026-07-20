@@ -1,6 +1,6 @@
 # 📝 To-Do App
 
-A modern To-Do List application built using **HTML, CSS, and JavaScript**. 
+A modern To-Do List application built using **HTML, CSS, and JavaScript**.
 The app allows users to manage daily tasks with persistent storage using the browser's Local Storage.
 
 ## 🚀 Features
@@ -25,7 +25,7 @@ The app allows users to manage daily tasks with persistent storage using the bro
 
 ## 🌐 Live Demo
 
-Coming Soon
+https://priyanshu-karmavat.github.io/todo-app/gi
 
 ## 📂 Installation
 
